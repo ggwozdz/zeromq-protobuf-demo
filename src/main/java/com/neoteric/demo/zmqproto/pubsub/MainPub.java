@@ -1,30 +1,29 @@
 package com.neoteric.demo.zmqproto.pubsub;
 
-import java.util.Random;
-
 import org.zeromq.ZMQ;
+
+import com.neoteric.demo.zmqproto.DemoProtos;
+import com.neoteric.demo.zmqproto.DemoProtos.Alert;
 
 public class MainPub {
 	public static void main (String[] args) throws Exception {
         //  Prepare our context and publisher
         ZMQ.Context context = ZMQ.context(1);
-
         ZMQ.Socket publisher = context.socket(ZMQ.PUB);
         publisher.bind("tcp://*:5556");
-        publisher.bind("ipc://weather");
 
-        //  Initialize random number generator
-        Random srandom = new Random(System.currentTimeMillis());
+        int counter = 0;
         while (!Thread.currentThread ().isInterrupted ()) {
-            //  Get values that will fool the boss
-            int zipcode, temperature, relhumidity;
-            zipcode = 10000 + srandom.nextInt(10000) ;
-            temperature = srandom.nextInt(215) - 80 + 1;
-            relhumidity = srandom.nextInt(50) + 10 + 1;
-
-            //  Send message to all subscribers
-            String update = String.format("%05d %d %d", zipcode, temperature, relhumidity);
-            publisher.send(update, 0);
+        	counter = ++counter%5;
+        	Alert alert = DemoProtos.Alert.newBuilder()
+        		.setSeverity(counter)
+        		.addMessage("message 1")
+        		.addMessage("message 2")
+        		.addMessage("message 3")
+        		.build();
+        	publisher.sendMore("alerts");
+            publisher.send(alert.toByteArray());
+            
         }
 
         publisher.close ();

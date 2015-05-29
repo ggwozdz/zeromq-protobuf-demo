@@ -8,6 +8,1648 @@ public final class DemoProtos {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
   }
+  public interface HelloMessageOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.neoteric.demo.zmqproto.HelloMessage)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required string messageText = 1;</code>
+     */
+    boolean hasMessageText();
+    /**
+     * <code>required string messageText = 1;</code>
+     */
+    java.lang.String getMessageText();
+    /**
+     * <code>required string messageText = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getMessageTextBytes();
+  }
+  /**
+   * Protobuf type {@code com.neoteric.demo.zmqproto.HelloMessage}
+   */
+  public static final class HelloMessage extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:com.neoteric.demo.zmqproto.HelloMessage)
+      HelloMessageOrBuilder {
+    // Use HelloMessage.newBuilder() to construct.
+    private HelloMessage(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private HelloMessage(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final HelloMessage defaultInstance;
+    public static HelloMessage getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public HelloMessage getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private HelloMessage(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              messageText_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.neoteric.demo.zmqproto.DemoProtos.internal_static_com_neoteric_demo_zmqproto_HelloMessage_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.neoteric.demo.zmqproto.DemoProtos.internal_static_com_neoteric_demo_zmqproto_HelloMessage_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.neoteric.demo.zmqproto.DemoProtos.HelloMessage.class, com.neoteric.demo.zmqproto.DemoProtos.HelloMessage.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<HelloMessage> PARSER =
+        new com.google.protobuf.AbstractParser<HelloMessage>() {
+      public HelloMessage parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new HelloMessage(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<HelloMessage> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int MESSAGETEXT_FIELD_NUMBER = 1;
+    private java.lang.Object messageText_;
+    /**
+     * <code>required string messageText = 1;</code>
+     */
+    public boolean hasMessageText() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required string messageText = 1;</code>
+     */
+    public java.lang.String getMessageText() {
+      java.lang.Object ref = messageText_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          messageText_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string messageText = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getMessageTextBytes() {
+      java.lang.Object ref = messageText_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        messageText_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private void initFields() {
+      messageText_ = "";
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasMessageText()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeBytes(1, getMessageTextBytes());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, getMessageTextBytes());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.neoteric.demo.zmqproto.DemoProtos.HelloMessage parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neoteric.demo.zmqproto.DemoProtos.HelloMessage parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neoteric.demo.zmqproto.DemoProtos.HelloMessage parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neoteric.demo.zmqproto.DemoProtos.HelloMessage parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neoteric.demo.zmqproto.DemoProtos.HelloMessage parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.neoteric.demo.zmqproto.DemoProtos.HelloMessage parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.neoteric.demo.zmqproto.DemoProtos.HelloMessage parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.neoteric.demo.zmqproto.DemoProtos.HelloMessage parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.neoteric.demo.zmqproto.DemoProtos.HelloMessage parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.neoteric.demo.zmqproto.DemoProtos.HelloMessage parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.neoteric.demo.zmqproto.DemoProtos.HelloMessage prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.neoteric.demo.zmqproto.HelloMessage}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.neoteric.demo.zmqproto.HelloMessage)
+        com.neoteric.demo.zmqproto.DemoProtos.HelloMessageOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.neoteric.demo.zmqproto.DemoProtos.internal_static_com_neoteric_demo_zmqproto_HelloMessage_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.neoteric.demo.zmqproto.DemoProtos.internal_static_com_neoteric_demo_zmqproto_HelloMessage_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.neoteric.demo.zmqproto.DemoProtos.HelloMessage.class, com.neoteric.demo.zmqproto.DemoProtos.HelloMessage.Builder.class);
+      }
+
+      // Construct using com.neoteric.demo.zmqproto.DemoProtos.HelloMessage.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        messageText_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.neoteric.demo.zmqproto.DemoProtos.internal_static_com_neoteric_demo_zmqproto_HelloMessage_descriptor;
+      }
+
+      public com.neoteric.demo.zmqproto.DemoProtos.HelloMessage getDefaultInstanceForType() {
+        return com.neoteric.demo.zmqproto.DemoProtos.HelloMessage.getDefaultInstance();
+      }
+
+      public com.neoteric.demo.zmqproto.DemoProtos.HelloMessage build() {
+        com.neoteric.demo.zmqproto.DemoProtos.HelloMessage result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.neoteric.demo.zmqproto.DemoProtos.HelloMessage buildPartial() {
+        com.neoteric.demo.zmqproto.DemoProtos.HelloMessage result = new com.neoteric.demo.zmqproto.DemoProtos.HelloMessage(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.messageText_ = messageText_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.neoteric.demo.zmqproto.DemoProtos.HelloMessage) {
+          return mergeFrom((com.neoteric.demo.zmqproto.DemoProtos.HelloMessage)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.neoteric.demo.zmqproto.DemoProtos.HelloMessage other) {
+        if (other == com.neoteric.demo.zmqproto.DemoProtos.HelloMessage.getDefaultInstance()) return this;
+        if (other.hasMessageText()) {
+          bitField0_ |= 0x00000001;
+          messageText_ = other.messageText_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasMessageText()) {
+          
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.neoteric.demo.zmqproto.DemoProtos.HelloMessage parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.neoteric.demo.zmqproto.DemoProtos.HelloMessage) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object messageText_ = "";
+      /**
+       * <code>required string messageText = 1;</code>
+       */
+      public boolean hasMessageText() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required string messageText = 1;</code>
+       */
+      public java.lang.String getMessageText() {
+        java.lang.Object ref = messageText_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            messageText_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string messageText = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getMessageTextBytes() {
+        java.lang.Object ref = messageText_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          messageText_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string messageText = 1;</code>
+       */
+      public Builder setMessageText(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        messageText_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string messageText = 1;</code>
+       */
+      public Builder clearMessageText() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        messageText_ = getDefaultInstance().getMessageText();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string messageText = 1;</code>
+       */
+      public Builder setMessageTextBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        messageText_ = value;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:com.neoteric.demo.zmqproto.HelloMessage)
+    }
+
+    static {
+      defaultInstance = new HelloMessage(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:com.neoteric.demo.zmqproto.HelloMessage)
+  }
+
+  public interface AlertOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.neoteric.demo.zmqproto.Alert)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required int32 severity = 1;</code>
+     */
+    boolean hasSeverity();
+    /**
+     * <code>required int32 severity = 1;</code>
+     */
+    int getSeverity();
+
+    /**
+     * <code>repeated string message = 2;</code>
+     */
+    com.google.protobuf.ProtocolStringList
+        getMessageList();
+    /**
+     * <code>repeated string message = 2;</code>
+     */
+    int getMessageCount();
+    /**
+     * <code>repeated string message = 2;</code>
+     */
+    java.lang.String getMessage(int index);
+    /**
+     * <code>repeated string message = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getMessageBytes(int index);
+  }
+  /**
+   * Protobuf type {@code com.neoteric.demo.zmqproto.Alert}
+   */
+  public static final class Alert extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:com.neoteric.demo.zmqproto.Alert)
+      AlertOrBuilder {
+    // Use Alert.newBuilder() to construct.
+    private Alert(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private Alert(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final Alert defaultInstance;
+    public static Alert getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public Alert getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Alert(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              severity_ = input.readInt32();
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                message_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              message_.add(bs);
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          message_ = message_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.neoteric.demo.zmqproto.DemoProtos.internal_static_com_neoteric_demo_zmqproto_Alert_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.neoteric.demo.zmqproto.DemoProtos.internal_static_com_neoteric_demo_zmqproto_Alert_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.neoteric.demo.zmqproto.DemoProtos.Alert.class, com.neoteric.demo.zmqproto.DemoProtos.Alert.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<Alert> PARSER =
+        new com.google.protobuf.AbstractParser<Alert>() {
+      public Alert parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Alert(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Alert> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int SEVERITY_FIELD_NUMBER = 1;
+    private int severity_;
+    /**
+     * <code>required int32 severity = 1;</code>
+     */
+    public boolean hasSeverity() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required int32 severity = 1;</code>
+     */
+    public int getSeverity() {
+      return severity_;
+    }
+
+    public static final int MESSAGE_FIELD_NUMBER = 2;
+    private com.google.protobuf.LazyStringList message_;
+    /**
+     * <code>repeated string message = 2;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getMessageList() {
+      return message_;
+    }
+    /**
+     * <code>repeated string message = 2;</code>
+     */
+    public int getMessageCount() {
+      return message_.size();
+    }
+    /**
+     * <code>repeated string message = 2;</code>
+     */
+    public java.lang.String getMessage(int index) {
+      return message_.get(index);
+    }
+    /**
+     * <code>repeated string message = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getMessageBytes(int index) {
+      return message_.getByteString(index);
+    }
+
+    private void initFields() {
+      severity_ = 0;
+      message_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasSeverity()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt32(1, severity_);
+      }
+      for (int i = 0; i < message_.size(); i++) {
+        output.writeBytes(2, message_.getByteString(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, severity_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < message_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeBytesSizeNoTag(message_.getByteString(i));
+        }
+        size += dataSize;
+        size += 1 * getMessageList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.neoteric.demo.zmqproto.DemoProtos.Alert parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neoteric.demo.zmqproto.DemoProtos.Alert parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neoteric.demo.zmqproto.DemoProtos.Alert parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neoteric.demo.zmqproto.DemoProtos.Alert parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neoteric.demo.zmqproto.DemoProtos.Alert parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.neoteric.demo.zmqproto.DemoProtos.Alert parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.neoteric.demo.zmqproto.DemoProtos.Alert parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.neoteric.demo.zmqproto.DemoProtos.Alert parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.neoteric.demo.zmqproto.DemoProtos.Alert parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.neoteric.demo.zmqproto.DemoProtos.Alert parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.neoteric.demo.zmqproto.DemoProtos.Alert prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.neoteric.demo.zmqproto.Alert}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.neoteric.demo.zmqproto.Alert)
+        com.neoteric.demo.zmqproto.DemoProtos.AlertOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.neoteric.demo.zmqproto.DemoProtos.internal_static_com_neoteric_demo_zmqproto_Alert_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.neoteric.demo.zmqproto.DemoProtos.internal_static_com_neoteric_demo_zmqproto_Alert_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.neoteric.demo.zmqproto.DemoProtos.Alert.class, com.neoteric.demo.zmqproto.DemoProtos.Alert.Builder.class);
+      }
+
+      // Construct using com.neoteric.demo.zmqproto.DemoProtos.Alert.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        severity_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        message_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.neoteric.demo.zmqproto.DemoProtos.internal_static_com_neoteric_demo_zmqproto_Alert_descriptor;
+      }
+
+      public com.neoteric.demo.zmqproto.DemoProtos.Alert getDefaultInstanceForType() {
+        return com.neoteric.demo.zmqproto.DemoProtos.Alert.getDefaultInstance();
+      }
+
+      public com.neoteric.demo.zmqproto.DemoProtos.Alert build() {
+        com.neoteric.demo.zmqproto.DemoProtos.Alert result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.neoteric.demo.zmqproto.DemoProtos.Alert buildPartial() {
+        com.neoteric.demo.zmqproto.DemoProtos.Alert result = new com.neoteric.demo.zmqproto.DemoProtos.Alert(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.severity_ = severity_;
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          message_ = message_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.message_ = message_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.neoteric.demo.zmqproto.DemoProtos.Alert) {
+          return mergeFrom((com.neoteric.demo.zmqproto.DemoProtos.Alert)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.neoteric.demo.zmqproto.DemoProtos.Alert other) {
+        if (other == com.neoteric.demo.zmqproto.DemoProtos.Alert.getDefaultInstance()) return this;
+        if (other.hasSeverity()) {
+          setSeverity(other.getSeverity());
+        }
+        if (!other.message_.isEmpty()) {
+          if (message_.isEmpty()) {
+            message_ = other.message_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureMessageIsMutable();
+            message_.addAll(other.message_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasSeverity()) {
+          
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.neoteric.demo.zmqproto.DemoProtos.Alert parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.neoteric.demo.zmqproto.DemoProtos.Alert) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int severity_ ;
+      /**
+       * <code>required int32 severity = 1;</code>
+       */
+      public boolean hasSeverity() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required int32 severity = 1;</code>
+       */
+      public int getSeverity() {
+        return severity_;
+      }
+      /**
+       * <code>required int32 severity = 1;</code>
+       */
+      public Builder setSeverity(int value) {
+        bitField0_ |= 0x00000001;
+        severity_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 severity = 1;</code>
+       */
+      public Builder clearSeverity() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        severity_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList message_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureMessageIsMutable() {
+        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+          message_ = new com.google.protobuf.LazyStringArrayList(message_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+      /**
+       * <code>repeated string message = 2;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getMessageList() {
+        return message_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string message = 2;</code>
+       */
+      public int getMessageCount() {
+        return message_.size();
+      }
+      /**
+       * <code>repeated string message = 2;</code>
+       */
+      public java.lang.String getMessage(int index) {
+        return message_.get(index);
+      }
+      /**
+       * <code>repeated string message = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getMessageBytes(int index) {
+        return message_.getByteString(index);
+      }
+      /**
+       * <code>repeated string message = 2;</code>
+       */
+      public Builder setMessage(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureMessageIsMutable();
+        message_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string message = 2;</code>
+       */
+      public Builder addMessage(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureMessageIsMutable();
+        message_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string message = 2;</code>
+       */
+      public Builder addAllMessage(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureMessageIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, message_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string message = 2;</code>
+       */
+      public Builder clearMessage() {
+        message_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string message = 2;</code>
+       */
+      public Builder addMessageBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureMessageIsMutable();
+        message_.add(value);
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:com.neoteric.demo.zmqproto.Alert)
+    }
+
+    static {
+      defaultInstance = new Alert(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:com.neoteric.demo.zmqproto.Alert)
+  }
+
+  public interface TaskOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.neoteric.demo.zmqproto.Task)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required string taskName = 1;</code>
+     */
+    boolean hasTaskName();
+    /**
+     * <code>required string taskName = 1;</code>
+     */
+    java.lang.String getTaskName();
+    /**
+     * <code>required string taskName = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getTaskNameBytes();
+
+    /**
+     * <code>required int32 workload = 2;</code>
+     */
+    boolean hasWorkload();
+    /**
+     * <code>required int32 workload = 2;</code>
+     */
+    int getWorkload();
+  }
+  /**
+   * Protobuf type {@code com.neoteric.demo.zmqproto.Task}
+   */
+  public static final class Task extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:com.neoteric.demo.zmqproto.Task)
+      TaskOrBuilder {
+    // Use Task.newBuilder() to construct.
+    private Task(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private Task(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final Task defaultInstance;
+    public static Task getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public Task getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Task(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              taskName_ = bs;
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              workload_ = input.readInt32();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.neoteric.demo.zmqproto.DemoProtos.internal_static_com_neoteric_demo_zmqproto_Task_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.neoteric.demo.zmqproto.DemoProtos.internal_static_com_neoteric_demo_zmqproto_Task_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.neoteric.demo.zmqproto.DemoProtos.Task.class, com.neoteric.demo.zmqproto.DemoProtos.Task.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<Task> PARSER =
+        new com.google.protobuf.AbstractParser<Task>() {
+      public Task parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Task(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Task> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int TASKNAME_FIELD_NUMBER = 1;
+    private java.lang.Object taskName_;
+    /**
+     * <code>required string taskName = 1;</code>
+     */
+    public boolean hasTaskName() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required string taskName = 1;</code>
+     */
+    public java.lang.String getTaskName() {
+      java.lang.Object ref = taskName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          taskName_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string taskName = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getTaskNameBytes() {
+      java.lang.Object ref = taskName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        taskName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int WORKLOAD_FIELD_NUMBER = 2;
+    private int workload_;
+    /**
+     * <code>required int32 workload = 2;</code>
+     */
+    public boolean hasWorkload() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required int32 workload = 2;</code>
+     */
+    public int getWorkload() {
+      return workload_;
+    }
+
+    private void initFields() {
+      taskName_ = "";
+      workload_ = 0;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasTaskName()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasWorkload()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeBytes(1, getTaskNameBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeInt32(2, workload_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, getTaskNameBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, workload_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.neoteric.demo.zmqproto.DemoProtos.Task parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neoteric.demo.zmqproto.DemoProtos.Task parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neoteric.demo.zmqproto.DemoProtos.Task parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neoteric.demo.zmqproto.DemoProtos.Task parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neoteric.demo.zmqproto.DemoProtos.Task parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.neoteric.demo.zmqproto.DemoProtos.Task parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.neoteric.demo.zmqproto.DemoProtos.Task parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.neoteric.demo.zmqproto.DemoProtos.Task parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.neoteric.demo.zmqproto.DemoProtos.Task parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.neoteric.demo.zmqproto.DemoProtos.Task parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.neoteric.demo.zmqproto.DemoProtos.Task prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.neoteric.demo.zmqproto.Task}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.neoteric.demo.zmqproto.Task)
+        com.neoteric.demo.zmqproto.DemoProtos.TaskOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.neoteric.demo.zmqproto.DemoProtos.internal_static_com_neoteric_demo_zmqproto_Task_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.neoteric.demo.zmqproto.DemoProtos.internal_static_com_neoteric_demo_zmqproto_Task_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.neoteric.demo.zmqproto.DemoProtos.Task.class, com.neoteric.demo.zmqproto.DemoProtos.Task.Builder.class);
+      }
+
+      // Construct using com.neoteric.demo.zmqproto.DemoProtos.Task.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        taskName_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        workload_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.neoteric.demo.zmqproto.DemoProtos.internal_static_com_neoteric_demo_zmqproto_Task_descriptor;
+      }
+
+      public com.neoteric.demo.zmqproto.DemoProtos.Task getDefaultInstanceForType() {
+        return com.neoteric.demo.zmqproto.DemoProtos.Task.getDefaultInstance();
+      }
+
+      public com.neoteric.demo.zmqproto.DemoProtos.Task build() {
+        com.neoteric.demo.zmqproto.DemoProtos.Task result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.neoteric.demo.zmqproto.DemoProtos.Task buildPartial() {
+        com.neoteric.demo.zmqproto.DemoProtos.Task result = new com.neoteric.demo.zmqproto.DemoProtos.Task(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.taskName_ = taskName_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.workload_ = workload_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.neoteric.demo.zmqproto.DemoProtos.Task) {
+          return mergeFrom((com.neoteric.demo.zmqproto.DemoProtos.Task)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.neoteric.demo.zmqproto.DemoProtos.Task other) {
+        if (other == com.neoteric.demo.zmqproto.DemoProtos.Task.getDefaultInstance()) return this;
+        if (other.hasTaskName()) {
+          bitField0_ |= 0x00000001;
+          taskName_ = other.taskName_;
+          onChanged();
+        }
+        if (other.hasWorkload()) {
+          setWorkload(other.getWorkload());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasTaskName()) {
+          
+          return false;
+        }
+        if (!hasWorkload()) {
+          
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.neoteric.demo.zmqproto.DemoProtos.Task parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.neoteric.demo.zmqproto.DemoProtos.Task) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object taskName_ = "";
+      /**
+       * <code>required string taskName = 1;</code>
+       */
+      public boolean hasTaskName() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required string taskName = 1;</code>
+       */
+      public java.lang.String getTaskName() {
+        java.lang.Object ref = taskName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            taskName_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string taskName = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getTaskNameBytes() {
+        java.lang.Object ref = taskName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          taskName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string taskName = 1;</code>
+       */
+      public Builder setTaskName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        taskName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string taskName = 1;</code>
+       */
+      public Builder clearTaskName() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        taskName_ = getDefaultInstance().getTaskName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string taskName = 1;</code>
+       */
+      public Builder setTaskNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        taskName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int workload_ ;
+      /**
+       * <code>required int32 workload = 2;</code>
+       */
+      public boolean hasWorkload() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required int32 workload = 2;</code>
+       */
+      public int getWorkload() {
+        return workload_;
+      }
+      /**
+       * <code>required int32 workload = 2;</code>
+       */
+      public Builder setWorkload(int value) {
+        bitField0_ |= 0x00000002;
+        workload_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 workload = 2;</code>
+       */
+      public Builder clearWorkload() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        workload_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:com.neoteric.demo.zmqproto.Task)
+    }
+
+    static {
+      defaultInstance = new Task(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:com.neoteric.demo.zmqproto.Task)
+  }
+
   public interface PersonOrBuilder extends
       // @@protoc_insertion_point(interface_extends:com.neoteric.demo.zmqproto.Person)
       com.google.protobuf.MessageOrBuilder {
@@ -1770,6 +3412,21 @@ public final class DemoProtos {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_neoteric_demo_zmqproto_HelloMessage_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_com_neoteric_demo_zmqproto_HelloMessage_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_neoteric_demo_zmqproto_Alert_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_com_neoteric_demo_zmqproto_Alert_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_neoteric_demo_zmqproto_Task_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_com_neoteric_demo_zmqproto_Task_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_neoteric_demo_zmqproto_Person_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -1789,14 +3446,17 @@ public final class DemoProtos {
   static {
     java.lang.String[] descriptorData = {
       "\n\ndemo.proto\022\032com.neoteric.demo.zmqproto" +
-      "\"\376\001\n\006Person\022\014\n\004name\030\001 \002(\t\022\n\n\002id\030\002 \002(\005\022\r\n" +
-      "\005email\030\003 \001(\t\022=\n\005phone\030\004 \003(\0132..com.neoter" +
-      "ic.demo.zmqproto.Person.PhoneNumber\032_\n\013P" +
-      "honeNumber\022\016\n\006number\030\001 \002(\t\022@\n\004type\030\002 \001(\016" +
-      "2,.com.neoteric.demo.zmqproto.Person.Pho" +
-      "neType:\004HOME\"+\n\tPhoneType\022\n\n\006MOBILE\020\000\022\010\n" +
-      "\004HOME\020\001\022\010\n\004WORK\020\002B(\n\032com.neoteric.demo.z" +
-      "mqprotoB\nDemoProtos"
+      "\"#\n\014HelloMessage\022\023\n\013messageText\030\001 \002(\t\"*\n" +
+      "\005Alert\022\020\n\010severity\030\001 \002(\005\022\017\n\007message\030\002 \003(" +
+      "\t\"*\n\004Task\022\020\n\010taskName\030\001 \002(\t\022\020\n\010workload\030" +
+      "\002 \002(\005\"\376\001\n\006Person\022\014\n\004name\030\001 \002(\t\022\n\n\002id\030\002 \002" +
+      "(\005\022\r\n\005email\030\003 \001(\t\022=\n\005phone\030\004 \003(\0132..com.n" +
+      "eoteric.demo.zmqproto.Person.PhoneNumber" +
+      "\032_\n\013PhoneNumber\022\016\n\006number\030\001 \002(\t\022@\n\004type\030" +
+      "\002 \001(\0162,.com.neoteric.demo.zmqproto.Perso" +
+      "n.PhoneType:\004HOME\"+\n\tPhoneType\022\n\n\006MOBILE",
+      "\020\000\022\010\n\004HOME\020\001\022\010\n\004WORK\020\002B(\n\032com.neoteric.d" +
+      "emo.zmqprotoB\nDemoProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1810,8 +3470,26 @@ public final class DemoProtos {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
-    internal_static_com_neoteric_demo_zmqproto_Person_descriptor =
+    internal_static_com_neoteric_demo_zmqproto_HelloMessage_descriptor =
       getDescriptor().getMessageTypes().get(0);
+    internal_static_com_neoteric_demo_zmqproto_HelloMessage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_com_neoteric_demo_zmqproto_HelloMessage_descriptor,
+        new java.lang.String[] { "MessageText", });
+    internal_static_com_neoteric_demo_zmqproto_Alert_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_com_neoteric_demo_zmqproto_Alert_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_com_neoteric_demo_zmqproto_Alert_descriptor,
+        new java.lang.String[] { "Severity", "Message", });
+    internal_static_com_neoteric_demo_zmqproto_Task_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_com_neoteric_demo_zmqproto_Task_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_com_neoteric_demo_zmqproto_Task_descriptor,
+        new java.lang.String[] { "TaskName", "Workload", });
+    internal_static_com_neoteric_demo_zmqproto_Person_descriptor =
+      getDescriptor().getMessageTypes().get(3);
     internal_static_com_neoteric_demo_zmqproto_Person_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_com_neoteric_demo_zmqproto_Person_descriptor,

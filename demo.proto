@@ -3,6 +3,21 @@ package com.neoteric.demo.zmqproto;
 option java_package = "com.neoteric.demo.zmqproto";
 option java_outer_classname = "DemoProtos";
 
+message HelloMessage {
+  required string messageText = 1;
+}
+
+message Alert {
+	required int32 severity = 1;
+	repeated string message = 2;
+}
+
+message Task {
+	required string taskName = 1;
+	required int32 workload  = 2;
+}
+
+
 message Person {
   required string name = 1;
   required int32 id = 2;
