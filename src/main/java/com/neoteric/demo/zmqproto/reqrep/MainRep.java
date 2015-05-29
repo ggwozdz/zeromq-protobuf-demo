@@ -21,7 +21,7 @@ public class MainRep {
             System.out.println("Received " + ": [" + helloMessage.getMessageText() + "]");
 
     		HelloMessage helloMessageResponse = DemoProtos.HelloMessage.newBuilder()
-    			.setMessageText("Hello Client")
+    			.setMessageText("Hello from Server")
     			.build();
             socket.send(helloMessageResponse.toByteArray(), 0);
 

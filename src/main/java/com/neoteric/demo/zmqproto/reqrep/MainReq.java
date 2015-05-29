@@ -10,7 +10,7 @@ public class MainReq {
 	public static void main (String[] args) throws InvalidProtocolBufferException{
 		
 		HelloMessage helloMessage = DemoProtos.HelloMessage.newBuilder()
-			.setMessageText("Hello Server")
+			.setMessageText("Hello from Client")
 			.build();
 		
 		
